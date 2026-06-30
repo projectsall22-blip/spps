@@ -131,9 +131,15 @@ const LandingPage = () => {
       </div>
 
       {/* 4. Simple Footer */}
-      <footer className="mt-16 text-center">
+      <footer className="mt-16 text-center space-y-2">
         <p className="text-xs font-black text-gray-900 uppercase tracking-widest">
           Academic Session {settings.currentAcademicYear}
+        </p>
+        <p className="text-[11px] text-gray-400 font-medium tracking-wide">
+          Designed &amp; Developed by{' '}
+          <span className="font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">
+            Avatri Tech
+          </span>
         </p>
       </footer>
     </div>
