@@ -135,7 +135,7 @@ const LandingPage = () => {
         <p className="text-xs font-black text-gray-900 uppercase tracking-widest">
           Academic Session {settings.currentAcademicYear}
         </p>
-        <p className="text-[11px] text-gray-400 font-medium tracking-wide">
+        <p className="text-[11px] text-gray-400 font-medium tracking-wide mt-4">
           Designed &amp; Developed by{' '}
           <span className="font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">
             Avatri Tech
