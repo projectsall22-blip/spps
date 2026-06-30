@@ -93,25 +93,12 @@ const AdminDashboard = () => {
         <div className="lg:col-span-2 space-y-6">
           <Card title="Urgent Action Radar" icon={AlertTriangle} className="border-red-100">
              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {/* Application Alert */}
-                <button 
-                  onClick={() => navigate('/admin/students/pending')}
-                  className="flex items-center justify-between p-4 bg-red-50 rounded-2xl border border-red-100 group transition-all active:scale-95"
-                >
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-danger shadow-sm">
-                       <UserPlus size={20} />
-                    </div>
-                    <div className="text-left">
-                       <p className="text-sm font-black text-gray-900">Admissions</p>
-                       <p className="text-[10px] font-bold text-danger uppercase">Pending Review</p>
-                    </div>
-                  </div>
-                  <ChevronRight size={18} className="text-danger group-hover:translate-x-1 transition-transform" />
-                </button>
 
                 {/* Attendance Alert */}
-                <div className="flex items-center justify-between p-4 bg-amber-50 rounded-2xl border border-amber-100">
+                <button
+                  onClick={() => navigate('/admin/attendance')}
+                  className="flex items-center justify-between p-4 bg-amber-50 rounded-2xl border border-amber-100 group transition-all active:scale-95"
+                >
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-warning shadow-sm">
                        <TrendingUp size={20} />
@@ -121,7 +108,26 @@ const AdminDashboard = () => {
                        <p className="text-[10px] font-bold text-warning uppercase">{overview.presentToday} Students</p>
                     </div>
                   </div>
-                </div>
+                  <ChevronRight size={18} className="text-warning group-hover:translate-x-1 transition-transform" />
+                </button>
+
+                {/* Exams Alert */}
+                <button
+                  onClick={() => navigate('/admin/exams')}
+                  className="flex items-center justify-between p-4 bg-indigo-50 rounded-2xl border border-indigo-100 group transition-all active:scale-95"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-primary shadow-sm">
+                       <ClipboardCheck size={20} />
+                    </div>
+                    <div className="text-left">
+                       <p className="text-sm font-black text-gray-900">Exams</p>
+                       <p className="text-[10px] font-bold text-primary uppercase">Manage Schedule</p>
+                    </div>
+                  </div>
+                  <ChevronRight size={18} className="text-primary group-hover:translate-x-1 transition-transform" />
+                </button>
+
              </div>
           </Card>
 
