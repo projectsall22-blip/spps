@@ -339,9 +339,10 @@ const Settings = require('../models/Settings');
 const getUpiInfo = async (req, res) => {
     const settings = await Settings.findOne({});
     res.json({
-        upiId:    settings?.upiId    || '',
-        upiQrCode: settings?.upiQrCode || '',
-        schoolName: settings?.schoolName || 'DV Convent School',
+        upiId:      settings?.upiId      || '',
+        upiName:    settings?.upiName    || settings?.schoolName || '',
+        upiQrCode:  settings?.upiQrCode  || '',
+        schoolName: settings?.schoolName || 'Sardar Patel Public School',
     });
 };
 
