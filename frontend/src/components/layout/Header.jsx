@@ -5,6 +5,8 @@ import { useAuth } from '../../context/AuthContext';
 import API from '../../api/axios';
 import { useSettings } from '../../context/SettingsContext';
 
+import schoolLogo from '../../assets/school_logo.png';
+
 const Header = ({ user, onMenuClick }) => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -59,7 +61,13 @@ const Header = ({ user, onMenuClick }) => {
           <Menu size={24} />
         </button>
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-xl">DV</div>
+          <div className="w-9 h-9 rounded-lg overflow-hidden border border-gray-200 shadow-sm flex-shrink-0">
+            <img
+              src={settings.schoolLogo || schoolLogo}
+              alt="School Logo"
+              className="w-full h-full object-cover"
+            />
+          </div>
           <h1 className="font-bold text-gray-800 hidden sm:block tracking-tight">
             {settings.schoolName}
           </h1>
