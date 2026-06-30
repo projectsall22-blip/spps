@@ -1,0 +1,6 @@
+node_modules/
+.env
+env
+all_code_b.py
+all_code_backend.txt
+render.yaml
